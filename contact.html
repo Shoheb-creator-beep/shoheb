@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Luke's Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="slider-thumb"></div>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <div class="intro">
+      <h1>Get In <span>Touch</span></h1>
+      <p>Have a question or want to work together? Feel free to reach out!</p>
+    </div>
+  </section>
+
+  <div class="contact-container">
+    <div class="contact-info">
+      <h2><i class="fas fa-paper-plane"></i> Contact Info</h2>
+      <div class="info-box">
+        <i class="fas fa-envelope icon"></i>
+        <div>
+          <h3>Email</h3>
+          <p><a href="mailto:lukekalaougivaki@gmail.com" class="link-highlight">lukekalaougivaki@gmail.com</a></p>
+        </div>
+      </div>
+      <div class="info-box">
+        <i class="fas fa-phone icon"></i>
+        <div>
+          <h3>Phone</h3>
+          <p>+679 1234567</p>
+        </div>
+      </div>
+      <div class="info-box">
+        <i class="fab fa-github icon"></i>
+        <div>
+          <h3>GitHub</h3>
+          <p><a href="#" class="link-highlight">github.com/yourusername</a></p>
+        </div>
+      </div>
+      <div class="info-box">
+        <i class="fab fa-instagram icon"></i>
+        <div>
+          <h3>Instagram</h3>
+          <p><a href="#" class="link-highlight">@yourhandle</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <h2><i class="fas fa-comment-dots"></i> Send Message</h2>
+      <form id="contactForm">
+        <div class="input-box">
+          <input type="text" id="name" required>
+          <span>Full Name</span>
+        </div>
+        <div class="input-box">
+          <input type="email" id="email" required>
+          <span>Email Address</span>
+        </div>
+        <div class="input-box">
+          <textarea id="message" required></textarea>
+          <span>Your Message</span>
+        </div>
+        <div class="input-box">
+          <input type="submit" value="Send Message">
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Luke Kalaougivaki. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      
+      const subject = `Message from ${name}`;
+      const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+      
+      window.location.href = `mailto:lukekalaougivaki@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    });
+  </script>
+</body>
+</html>
